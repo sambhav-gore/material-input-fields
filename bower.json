@@ -1,0 +1,26 @@
+{
+  "name": "material-input-fields",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sambhav-gore/material-input-fields",
+  "authors": [
+    "sambhavgore@gmail.com"
+  ],
+  "description": "An example to make material-design style input fields",
+  "main": "index.html",
+  "keywords": [
+    "material",
+    "design",
+    "inputs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15"
+  }
+}

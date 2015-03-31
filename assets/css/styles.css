@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 10px;
+  background: #f9f9f9;
+  font-family: helvetica, arial, sans-serif;
+  box-sizing: border-box; }
+
+h3 {
+  color: #787878;
+  margin-top: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
+
+.wrapper {
+  width: 100%; }
+
+.form-wrapper {
+  width: 340px;
+  margin: 60px auto;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); }
+
+.form-group {
+  /*styles for the form-group itself*/
+  position: relative;
+  width: 100%;
+  margin-bottom: 42px; }
+  .form-group input[type='text'], .form-group input[type='email'] {
+    /*Default styles for field*/
+    position: relative;
+    width: 100%;
+    background: 0 0;
+    padding: 26px 0 12px;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-width: 0 0 1px;
+    box-shadow: none;
+    z-index: 1; }
+    .form-group input[type='text']:focus, .form-group input[type='email']:focus {
+      outline: 0; }
+  .form-group label {
+    /*Default styles for label*/
+    display: inline-block;
+    position: absolute;
+    margin-bottom: 6px;
+    top: 0;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 0;
+    transition: all .3s ease; }
+  .form-group::after {
+    /*Default styles for 'after' pseudo selector for form-group*/
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.08);
+    transition: all .3s ease; }
+  .form-group .error-block {
+    /*Default Styles for Help-block*/
+    position: absolute;
+    line-height: 0;
+    font-weight: 300;
+    font-size: 12px;
+    color: red;
+    line-height: 24px;
+    transition: all 0.5s ease;
+    margin: 0; }
+    .form-group .error-block.ng-hide {
+      display: block !important;
+      visibility: hidden;
+      opacity: 0; }
+  .form-group.has-focus {
+    /*When field has focus*/ }
+    .form-group.has-focus label {
+      color: #039BE5; }
+    .form-group.has-focus::after {
+      left: 0;
+      background: #039BE5;
+      width: 100%;
+      /*We are changing the width of the pseudo element from 0 to 100%. As there is already transition added to it, the change in width will 'animate'. As we have strategically positioned this pseudo element just below the input with a 2px height, it will 'appear' as bottom-border for the input (which it is actually not)*/ }
+  .form-group.has-error {
+    /*When field has error*/ }
+    .form-group.has-error label {
+      color: red; }
+    .form-group.has-error::after {
+      left: 0;
+      background: red;
+      width: 100%; }
+    .form-group.has-error .help-block:not(.ng-hide) {
+      position: absolute;
+      color: red;
+      opacity: 1;
+      visibility: visible;
+      top: 100%; }
+  .form-group.has-success.has-focus {
+    /*When field has success*/ }
+    .form-group.has-success.has-focus label {
+      color: forestgreen; }
+    .form-group.has-success.has-focus.has-focus::after {
+      left: 0;
+      background: forestgreen;
+      width: 100%; }
+  .form-group.is-empty:not(.has-focus) label {
+    font-weight: 400;
+    font-size: 14px;
+    top: 32px; }
+
+/*# sourceMappingURL=styles.css.map */

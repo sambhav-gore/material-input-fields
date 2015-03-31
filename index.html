@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Material Input Fields</title>
+
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body ng-app="app">
+	<div class="wrapper">
+		<div class="form-wrapper">
+			<h3>Floating Labels Example</h3>
+			<form name="form" novalidate>
+				<div class="form-group" 
+						ng-class='{ "has-focus": form.name.hasFocus,
+						"has-success": form.name.$valid,
+						"has-error": form.name.$invalid && (form.$submitted || form.name.$touched),
+						"is-empty": !form.name.$viewValue }'>
+					<label for="name">Enter a Name</label>
+					<input type="text" name="name" ng-model="user.name" required
+						ng-focus='form.name.hasFocus=true', ng-blur='form.name.hasFocus=false'>
+					<p ng-show="form.name.$error.required && (form.name.$touched || submitted)" 
+						class="error-block">Name is Required!</p>
+				</div>
+				<div class="form-group" 
+						ng-class='{ "has-focus": form.email.hasFocus,
+						"has-success": form.email.$valid,
+						"has-error": form.email.$invalid && (form.$submitted || form.email.$touched),
+						"is-empty": !form.email.$viewValue }'>
+					<label for="email">Enter an Email</label>
+					<input type="email" name="email" ng-model="user.email" required
+						ng-focus='form.email.hasFocus=true', ng-blur='form.email.hasFocus=false' autocomplete="off">
+					<p ng-show="form.email.$error.required && (form.email.$touched || submitted)" class="error-block">Email is Required!</p>
+					<p ng-show="form.email.$error.email && (form.email.$touched || submitted)" class="error-block">Email is Invalid!</p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="app/app.js"></script>
+</body>
+</html>
